@@ -1,0 +1,74 @@
+<ActionBar title="Chat">
+</ActionBar>
+
+<GridLayout
+  rows="auto, *, auto">
+  <GridLayout row="0">
+    <Image 
+      stretch="aspectFill"
+      [src]="other.coverUrl"
+      class="other-cover-image"></Image>
+    <StackLayout
+      class="profile-container">
+      <StackLayout
+        orientation="horizontal">
+        <StackLayout 
+          class="other-profile-image-container">
+          <Image 
+            [src]="other.pictureUrl"
+            class="other-profile-image"> </Image>
+        </StackLayout>
+        <Label
+          class="other-name"
+          [text]="other.name"></Label>
+      </StackLayout>
+    </StackLayout>
+  </GridLayout>
+  <ListView
+    #chatBox
+    separatorColor="transparent"
+    [items]="messages"
+    (loaded)="scrollChatToBottom()"
+    row="1">
+    <template let-item="item">
+      <GridLayout 
+        class="bubble-container">
+        <StackLayout
+          [class]="bubbleClass(item)">
+          <TextView
+            editable="false"
+            class="message-content"
+            [text]="item.content"></TextView>
+          <Label
+            [text]="item.date | timeAgo"
+            class="message-date"></Label>
+        </StackLayout>
+        <Image 
+          [src]="item.sender.pictureUrl"
+          [class]="bubbleClass(item) + '-picture'"></Image>
+      </GridLayout>
+    </template>
+  </ListView>
+  <StackLayout
+    #messageBox
+    row="2">
+    <StackLayout
+      class="horizontal-separator"></StackLayout>
+    <StackLayout class="message-box-container">
+      <GridLayout
+        columns="*, auto"
+        class="message-box">
+        <TextView
+          #newMessage
+          col="0"
+          hint="Write a message..."
+          class="write-message-field" ></TextView>
+        <Label
+          (tap)="sendMessage()"
+          col="1"
+          text="Send"
+          class="send-button"></Label>
+      </GridLayout>
+    </StackLayout>
+  </StackLayout>
+</GridLayout>

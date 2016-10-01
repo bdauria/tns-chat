@@ -1,0 +1,9 @@
+app/**/*.js
+app/**/*.js.map
+!app/tns-java-classes.js
+hooks/
+lib/
+node_modules/
+platforms/
+tmp/
+typings/

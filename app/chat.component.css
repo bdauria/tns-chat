@@ -1,0 +1,92 @@
+Image.other-profile-image {
+  height: 75;
+  width: 75;
+  border-radius: 36;
+}
+
+Image.other-cover-image {
+  height: 130;
+}
+
+StackLayout.other-profile-image-container {
+  border-color: #FFFFFF;
+  border-width: 2;
+  border-radius: 38;
+}
+
+StackLayout.profile-container {
+  vertical-align: middle;
+  horizontal-align: left;
+  margin-left: 10;
+}
+
+Label.other-name {
+  border-color: #000000;
+  vertical-align: middle;
+  margin-left: 5;
+  font-size: 18;
+  color: #FFFFFF;
+}
+
+StackLayout.bubble-from-me,
+StackLayout.bubble-from-other{
+  border-radius: 10;
+  padding: 10;
+  font-size: 14;
+}
+
+TextView.message-content {
+  width: 100%;
+  background-color: transparent;
+}
+
+Label.message-date {
+  font-size: 11;
+  font-style: italic;
+  margin-left: 10;
+  horizontal-align: left;
+}
+
+
+StackLayout.bubble-from-me {
+  background-color: #85929E;
+  margin-left: 40;
+}
+
+
+StackLayout.bubble-from-other {
+  background-color: #D6DBDF;
+  margin-right: 40;
+}
+
+GridLayout.bubble-container {
+  padding: 10;
+}
+
+Image.bubble-from-me-picture,
+Image.bubble-from-other-picture {
+  height: 35;
+  width: 35;
+  border-radius: 17;
+  vertical-align: bottom;
+}
+
+Image.bubble-from-other-picture {
+  horizontal-align: right;
+  margin-right: 17;
+}
+
+Image.bubble-from-me-picture {
+  horizontal-align: left;
+  margin-left: 17;
+}
+
+Label.send-button {
+  vertical-align: middle;
+  margin-left: 5;
+  color: $send-button-color;
+}
+
+GridLayout.message-box {
+  padding: 10;
+}
